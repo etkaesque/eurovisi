@@ -26,7 +26,7 @@ export default function Header() {
       console.log("profile?", profile)
   
       if (document.cookie != "") {
-        fetch("/api/getProfile")
+        fetch("https://eurovisiongen.vercel.app/api/getProfile")
         .then((response) => {
           if (!response.ok) {
             throw new Error("HTTP error, status = " + response.status);
