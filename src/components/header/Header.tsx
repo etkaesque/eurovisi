@@ -23,24 +23,19 @@ export default function Header() {
   
   useEffect(() => {
     
-      console.log("profile?")
-    
+      console.log("profile?", profile)
   
       if (document.cookie != "") {
-        console.log("token exists")
-  
-        axios.get("https://eurovisiongen.vercel.app/api/getProfile", {
-          withCredentials: true,
-          headers: {
-            Cookie: document.cookie,
-          },
-        })
+        fetch("/api/getProfile")
         .then((response) => {
-          console.log(response)
-          setProfile(response.data);
+          if (!response.ok) {
+            throw new Error("HTTP error, status = " + response.status);
+          }
+          return response.json();
         })
-        .catch((error) => console.log("error from get profile", error));
-      }
+        .then((data) => setProfile(data))
+        .catch((error) => console.error(error))}
+
     }, []);
   
   
