@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   const handleLogout = async () => {
-    await axios.get("https://eurovision-service.onrender.com/logout");
+    await axios.get("https://eurovisiongen.vercel.app/api/logout");
     setProfile(null);
   };
 
@@ -28,7 +28,7 @@ export default function Header() {
       if (document.cookie) {
         console.log("token exists")
   
-        axios.get("https://eurovision-service.onrender.com/getProfile", {
+        axios.get("https://eurovisiongen.vercel.app/api/getProfile", {
           withCredentials: true,
           headers: {
             Cookie: document.cookie,

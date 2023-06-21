@@ -13,7 +13,7 @@ export default async function callback(req :any , res :any) {
       method: 'POST',
       body: new URLSearchParams({
         code: code,
-        redirect_uri: "https://eurovisiongen.vercel.app/callback",
+        redirect_uri: "https://eurovisiongen.vercel.app/api/callback",
         grant_type: 'authorization_code'
       }),
       headers: {

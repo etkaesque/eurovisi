@@ -27,7 +27,7 @@ export default function Home({data}) {
 
 export async function getServerSideProps(){
 
-  const response = await fetch("https://eurovision-service.onrender.com/getSongs");
+  const response = await fetch("https://eurovisiongen.vercel.app/api/getSongs");
   console.log(response)
   const data = await response.json();
 

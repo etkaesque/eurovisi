@@ -97,7 +97,7 @@ export default function Generator({ data }: any) {
       const filteredIdsOfSongs = idsOfSongs.filter(Boolean);
 
       await axios.post(
-        "https://eurovision-service.onrender.com/makePlaylist",
+        "https://eurovisiongen.vercel.app/api/makePlaylist",
         {
           idsOfSongs: filteredIdsOfSongs,
         },

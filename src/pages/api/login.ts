@@ -2,7 +2,7 @@ import qs from 'querystring';
   // @ts-ignore
 import randomString from 'randomstring'
 
-let redirect_uri = 'https://eurovisionsim.vercel.app/callback';
+let redirect_uri = 'https://eurovisiongen.vercel.app/api/callback';
 
 export default async function GET(req: any, res: any) {
   let state = randomString.generate(12);
