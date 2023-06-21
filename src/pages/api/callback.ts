@@ -36,7 +36,7 @@ export default async function callback(req :any , res :any) {
       ]);
       
       // Redirect the user back to your main page
-      res.redirect('/');
+      res.redirect('https://eurovisiongen.vercel.app');
 
       
     console.log("Cookies are set.")
