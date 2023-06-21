@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
   // @ts-ignore
-import EuropeanSongs from "../../models/EuropeanSongs";
+  import EuropeanSongs from "../../../models/EuropeanSongs";
 
 export default async function DELETE(req: any, res: any) {
   

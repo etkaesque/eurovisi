@@ -1,7 +1,7 @@
 
 import mongoose from "mongoose";
   // @ts-ignore
-import EuropeanSongs from "../../models/EuropeanSongs"
+import EuropeanSongs from "../../../models/EuropeanSongs"
 
 export default async function GET(req: any, res: any) {
     try {
