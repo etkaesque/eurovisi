@@ -84,7 +84,7 @@ export default function Header() {
           ) : (
             <a
               className={styles.spotifyLogin}
-              href="https://eurovision-service.onrender.com/login"
+              href="https://eurovisiongen.vercel.app/api/login"
             >
               <span>LOG IN WITH</span>
               <svg
