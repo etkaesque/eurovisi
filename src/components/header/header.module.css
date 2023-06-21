@@ -1,0 +1,169 @@
+.headerWrapper {
+  width: 100%;
+  height: 250px;
+  background-color: #002366;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+
+}
+
+
+.headerLine {
+  background-color: #002366;
+  transform: rotate(-0.5deg);
+  z-index: 1;
+  position: relative;
+  bottom: 8px;
+  height: 25px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 100px;
+
+}
+
+.logo img {
+
+    width: 100%;
+
+}
+
+.logo span {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 7px;
+}
+
+.spotifyLoginWrapper {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
+
+.spotifyLogin {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 7px;
+  border: 1px solid transparent;
+ 
+
+}
+
+.spotifyLogin span {
+  font-size: 0.7rem;
+  
+}
+
+.spotifyLogin svg {
+  width: auto;
+  height: 35px;
+  fill: white;
+  transition: fill .3s;
+  
+}
+
+.spotifyLogin:hover svg {
+  fill: #1ED760;
+
+
+}
+
+
+.profile {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  position: relative;
+}
+
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 3px solid #FF0087;
+}
+
+.profile h2 {
+
+  font-size: 1.2em;
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+  
+}
+
+.arrow {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(180deg);
+  
+}
+
+.arrowUp {
+  transition: transform 0.2s ease-in-out;
+  transform: rotate(0deg);
+}
+
+.logOutWrapper {
+  position: absolute;
+  top: 100%;
+  right: 0;
+
+}
+.logOutWrapper button {
+  font-size: 1em;
+  color: white;
+  padding: 10px 20px;
+
+  background-color: #FF0087;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 3px solid #FF0087;
+  transition: background-color 0.4s;
+}
+
+.logOutWrapper button:hover {
+
+  background-color: transparent;
+
+}
+
+@media (max-width: 999px) {
+
+  .headerWrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .spotifyLoginWrapper {
+  
+    position: initial;
+    z-index: 2;
+   
+
+  
+  }
+
+}

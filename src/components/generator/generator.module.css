@@ -1,0 +1,157 @@
+
+.main{
+    min-height: 100vh;
+    color: white;
+  
+    
+  }
+  
+  .mainWrapper {
+  
+   
+    width: 100%;
+    height: 100%;
+  
+  
+  }
+
+
+.generateSection {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+
+ 
+}
+
+
+
+
+
+.generateButtonWrapper {
+    grid-column: 2/3;
+
+}
+
+.createPlaylistButtonWrapper {
+    grid-column: 3/4;
+    justify-self: end;
+    padding-right: 50px;
+    position: relative;
+
+}
+
+@media (max-width: 999px) {
+
+    .generateSection{
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+     
+    }
+
+    .generateButtonWrapper {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding-top: 30px;
+    }
+
+    .createPlaylistButtonWrapper {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        justify-self: center;
+        padding-right: 0px;
+    }
+
+}
+
+
+
+.saved {
+    position: absolute;
+    font-family: Helvetica, sans-serif;
+    color: white;
+    top: -30px;
+    left: 10px;
+}
+
+.createPlaylistButtonWrapper button {
+
+    font-size: 1.4em;
+    color: white;
+    padding: 15px 30px;
+    background-color: #FF0087;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid #FF0087;
+    transition: background-color 0.4s;
+
+}
+
+.createPlaylistButtonWrapper button:hover {
+    background-color: transparent;
+}
+
+.forYourInformation {
+    font-style: italic;
+    font-size: small;
+    letter-spacing: 1px;
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.generate {
+    font-size: 1.4em;
+    color: white;
+    padding: 15px 30px;
+    background-color: #FF0087;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 3px solid #FF0087;
+    transition: background-color 0.4s;
+}
+
+.generate:hover {
+    background-color: transparent;
+}
+
+.generate:active {
+
+    background-color:  #ff0088f0;
+  
+}
+
+.songSection {
+
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    column-gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 1.15px;
+    font-size: 1.15rem;
+    padding: 15px;
+}
+
+.infoBox p:last-child {
+    margin-top: 50px;
+}
+
+.infoBox h1 {
+     font-size: 2rem;
+     text-align: center;
+}
+
