@@ -1,4 +1,4 @@
-export default async function getProfile(req :any, res :any) {
+export default async function GET(req :any, res :any) {
     const { access_token } = req.cookies;
   
     try {

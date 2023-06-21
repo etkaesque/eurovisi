@@ -23,20 +23,27 @@ export default function Header() {
   
   useEffect(() => {
     
-      console.log("profile?", profile)
+    console.log("profile?", profile)
   
-      if (document.cookie != "") {
-        fetch("https://eurovisiongen.vercel.app/api/getProfile")
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("HTTP error, status = " + response.status);
-          }
-          return response.json();
-        })
-        .then((data) => setProfile(data))
-        .catch((error) => console.error(error))}
 
-    }, []);
+    if (document.cookie != "") {
+      console.log("token exists")
+
+      axios.get("https://eurovisiongen.vercel.app/api/getProfile", {
+        withCredentials: true,
+        headers: {
+          Cookie: document.cookie,
+        },
+      })
+      .then((response) => {
+        console.log(response)
+        setProfile(response.data);
+      })
+      .catch((error) => console.log("error from get profile", error));
+    } else {
+      console.log("token doesnt exist")
+    }
+  }, []);
   
   
 
