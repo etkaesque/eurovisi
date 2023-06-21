@@ -26,23 +26,15 @@ export default function Header() {
     console.log("profile?", profile)
   
 
-    if (document.cookie != "") {
-      console.log("token exists")
-
       axios.get("https://eurovisiongen.vercel.app/api/getProfile", {
         withCredentials: true,
-        headers: {
-          Cookie: document.cookie,
-        },
       })
       .then((response) => {
         console.log(response)
         setProfile(response.data);
       })
       .catch((error) => console.log("error from get profile", error));
-    } else {
-      console.log("token doesnt exist")
-    }
+    
   }, []);
   
   
