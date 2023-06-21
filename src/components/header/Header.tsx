@@ -22,10 +22,11 @@ export default function Header() {
 
   
   useEffect(() => {
-      
+    
+      console.log("profile?")
+    
   
-  
-      if (document.cookie) {
+      if (document.cookie != "") {
         console.log("token exists")
   
         axios.get("https://eurovisiongen.vercel.app/api/getProfile", {
